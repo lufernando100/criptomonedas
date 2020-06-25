@@ -7,13 +7,13 @@ const ResultadoDiv = styled.div`
 `;
 
 const Info = styled.p`
-    font-size: 18px;
+    font-size: 15px;
     span {
         font-weight:bold;
     }
 `;
 const Precio = styled.p`
-    font-size: 30px;
+    font-size: 20px;
     span {
         font-weight:bold;
     }

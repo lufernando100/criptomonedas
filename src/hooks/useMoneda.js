@@ -2,11 +2,11 @@ import React, {Fragment, useState } from 'react';
 import styled from '@emotion/styled'
 
 const Label = styled.label`
-font-family:"Bebas Neue", cursive;
-color: black;
+font-family:"inherit", cursive;
+color: white;
 text-transform: uppercase;
 font-weight: bold;
-font-size: 2.4rem;
+font-size: 25px;
 margin-top: 2rem;
 display: block; 
 `;

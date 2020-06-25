@@ -76,7 +76,7 @@ guardarCriptomoneda(criptoMoneda);
     <form
     onSubmit={cotizarMoneda}
     >
-      {error ? <Error mensaje= "Todos los mensajes son obligatorios, sopeco "/>: null}
+      {error ? <Error mensaje= "Todos los mensajes son obligatorios, sopenco "/>: null}
       <SeleccionarMonedas/>
       <SeleccionarCripto/>
       <Boton type="submit" value="calcular" />

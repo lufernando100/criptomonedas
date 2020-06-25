@@ -6,28 +6,37 @@ import Cotizacion from "./components/Cotizacion";
 import axios from "axios";
 import Spinner from "./components/Spinner";
 
+const Div = styled.div`
+ font-family: "inherit", cursive;
+  color: orangered;
+  text-align: left;
+  font-weight: 700;
+  font-size: 35px;
+  margin-bottom: 180px;
+  margin-top: 180px;
+`;
+
 const Contenedor = styled.div`
   max-width: 900px;
   margin: 0 auto;
-  @media (min-width: 998px) {
+  @media (min-width: 98px) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2rem;
   }
 `;
 const Imagen = styled.img`
-  max-width: 50%;
-  margin-top: 5rem;
-  
-  
+  max-width: 35%;
+  margin-top: -6rem;
+  background-position-x: 10px;
 `;
 
 const Heading = styled.div`
-  font-family: "Bebas Neue", cursive;
-  color: black;
+  font-family: "inherit", cursive;
+  color: white;
   text-align: left;
   font-weight: 700;
-  font-size: 55px;
+  font-size: 35px;
   margin-bottom: 50px;
   margin-top: 80px;
 
@@ -68,21 +77,26 @@ function App() {
 
   // Mostrar Sppiner o resultado
 
-  const componente = (cargando) ? <Spinner/> :  <Cotizacion resultado={resultado} />
+  const componente = cargando ? (
+    <Spinner />
+  ) : (
+    <Cotizacion resultado={resultado} />
+  );
 
   return (
     <Contenedor>
-      <div>
-        <Imagen src={imagen} alt="Imagen Cripto" />
-      </div>
-      <div>
-        <Heading>Bienvenidos a la Cripta</Heading>
+      <div className="center">
+        <Heading>Bienvenidos a la cripta</Heading>
         <Formulario
           guardarMoneda={guardarMoneda}
           guardarCriptomoneda={guardarCriptomoneda}
         />
-       {componente}
       </div>
+      <Div>
+      <Imagen src={imagen} alt="Imagen Cripto" className="center" />
+        {componente}
+      </Div>
+      
     </Contenedor>
   );
 }
